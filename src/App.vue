@@ -1,3 +1,5 @@
 <template>
-  <RouterView></RouterView>
+  <div class="mobile-view">
+    <RouterView></RouterView>
+  </div>
 </template>
