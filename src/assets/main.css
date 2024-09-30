@@ -9,10 +9,15 @@ html, body {
 }
 
 .mobile-view {
-  /* center view */
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  
+  overflow-x: hidden;
+  
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   
   width: 375px; 
   margin: 0 auto; /* Centers the mobile view on larger screens */
@@ -25,4 +30,17 @@ html, body {
   .mobile-view {
     width: 100%; /* Ensures that on small screens the width is responsive */
   }
+
+}
+
+/* LIST FONT FAMILY */
+
+@font-face {
+  font-family: "KyivType";
+  font-style: normal;
+  src: url("@/assets/fonts/KyivTypeSansRegular-.otf") format("opentype");
+}
+
+.custom-font-kyiv {
+  font-family: "KyivType";
 }
