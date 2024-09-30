@@ -9,6 +9,11 @@ html, body {
 }
 
 .mobile-view {
+  /* center view */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   width: 375px; 
   margin: 0 auto; /* Centers the mobile view on larger screens */
   height: 100vh;
