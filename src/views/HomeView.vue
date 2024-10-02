@@ -5,7 +5,7 @@
       id="joglo"
       src="@/assets/images/joglo.png"
       alt="rumah joglo"
-      class="scale-[500%] mt-[350px] opacity-0 transition-opacity duration-1000"
+      class="scale-[500%] mt-[480px] opacity-0 transition-opacity duration-1000"
     />
   </div>
 </template>
