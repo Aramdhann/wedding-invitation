@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex items-center justify-center min-h-lvh overflow-hidden">
+  <div class="relative flex items-center justify-center min-h-screen overflow-hidden">
     <OpeningWord/>
     <img
       id="joglo"
