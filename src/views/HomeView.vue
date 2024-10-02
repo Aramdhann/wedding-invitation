@@ -18,8 +18,13 @@
     <!-- Modal with transition -->
     <transition name="modal-fade" @before-enter="beforeEnter" @enter="enter" @leave="leave">
       <div v-if="isModalVisible" class="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-20">
-        <div class="p-5 rounded-lg text-center bg-image">
-          <h2 class="text-2xl font-bold">Invitation Modal</h2>
+        <div class="px-[50px] py-[56px] rounded-lg text-center bg-image flex flex-col items-center gap-9">
+          <h2 class="text-3xl custom-font-playwrite">The Wedding of</h2>
+          <img :src="sampleInitial" alt="initial nama pengantin">
+          <h2 class="text-xl custom-font-playwrite">10 November 2024</h2>
+          <p class="text-xl custom-font-kyiv">countdown</p>
+          <Countdown endDate="2024-10-10T00:00:00Z"/>
+          <button class="px-10 py-2 bg-[#B2CAB5] rounded-full hover:bg-[#A0B8A4] hover:scale-105 transform transition-all  duration-500">Ingatkan Saya</button>
         </div>
       </div>
     </transition>
@@ -29,6 +34,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import OpeningWord from '@/components/OpeningWord.vue';
+import sampleInitial from '@/assets/images/sample_initial.png'
+import Countdown from '@/components/Countdown.vue';
 
 const isZoomed = ref(false); // Controls whether the image is zoomed in or not
 const isModalVisible = ref(false); // Controls modal visibility
