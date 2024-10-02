@@ -24,7 +24,7 @@
           <h2 class="text-xl custom-font-playwrite">10 November 2024</h2>
           <p class="text-xl custom-font-kyiv">countdown</p>
           <Countdown endDate="2024-10-10T00:00:00Z"/>
-          <button class="px-10 py-2 bg-[#B2CAB5] rounded-full hover:bg-[#A0B8A4] hover:scale-105 transform transition-all  duration-500">Ingatkan Saya</button>
+          <ButtonCalendar/>
         </div>
       </div>
     </transition>
@@ -36,6 +36,7 @@ import { ref, onMounted } from 'vue';
 import OpeningWord from '@/components/OpeningWord.vue';
 import sampleInitial from '@/assets/images/sample_initial.png'
 import Countdown from '@/components/Countdown.vue';
+import ButtonCalendar from '@/components/ButtonCalendar.vue';
 
 const isZoomed = ref(false); // Controls whether the image is zoomed in or not
 const isModalVisible = ref(false); // Controls modal visibility
@@ -47,11 +48,6 @@ const handleInvitationOpen = () => {
   setTimeout(() => {
     isModalVisible.value = true; // Show the modal after zoom-in
   }, 2500); // Delay the modal to match the zoom timing
-};
-
-// Function to close the modal
-const closeModal = () => {
-  isModalVisible.value = false;
 };
 
 onMounted(() => {
