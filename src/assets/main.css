@@ -42,6 +42,16 @@ html, body {
   src: url("@/assets/fonts/KyivTypeSansRegular-.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Playwrite";
+  font-style: normal;
+  src: url("@/assets/fonts/PlaywriteUSTrad-Light.ttf") format("truetype");
+}
+
 .custom-font-kyiv {
   font-family: "KyivType";
+}
+
+.custom-font-playwrite {
+  font-family: "Playwrite";
 }
