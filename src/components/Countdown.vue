@@ -64,8 +64,3 @@ onUnmounted(() => {
 })
 </script>
 
-<!-- <style scoped>
-  #countdown {
-    /* Add any custom styles here */
-  }
-  </style> -->

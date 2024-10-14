@@ -22,7 +22,6 @@ html, body {
   min-width: 375px; 
   max-width: 475px;
   margin: 0 auto; /* Centers the mobile view on larger screens */
-  height: 100vh;
   overflow-y: auto; /* Allow vertical scrolling if needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: to create a mobile frame effect */
 }
