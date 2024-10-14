@@ -22,7 +22,8 @@
     />
 
     <div v-if="hideObject">
-      <div class="flex flex-col items-center justify-center min-h-screen gap-9">
+      <div class="flex flex-col items-center justify-center min-h-screen gap-9"
+        data-aos="zoom-in">
         <h2 class="text-3xl custom-font-playwrite">
           The Wedding of <br />
           <span class="flex justify-center mt-4 text-xl custom-font-kyiv"
