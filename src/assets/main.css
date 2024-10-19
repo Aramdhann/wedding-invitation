@@ -42,9 +42,26 @@ html, body {
 }
 
 @font-face {
-  font-family: "Playwrite";
+  font-family: "PlaywriteUSTrad";
   font-style: normal;
   src: url("@/assets/fonts/PlaywriteUSTrad-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "KulimPark";
+  font-style: normal;
+  src: url("@/assets/fonts/KulimPark-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlaywriteUSModern";
+  font-style: normal;
+  src: url("@/assets/fonts/PlaywriteUSModern-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "InstrumentSans";
+  src: url("@/assets/fonts/InstrumentSans-Regular.ttf") format("truetype");
 }
 
 .custom-font-kyiv {
@@ -52,5 +69,17 @@ html, body {
 }
 
 .custom-font-playwrite {
-  font-family: "Playwrite";
+  font-family: "PlaywriteUSTrad";
+}
+
+.custom-font-kulim {
+  font-family: "KulimPark";
+}
+
+.custom-font-playwrite-modern {
+  font-family: "PlaywriteUSModern";
+}
+
+.custom-font-instrument {
+  font-family: "InstrumentSans";
 }

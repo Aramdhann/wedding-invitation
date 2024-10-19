@@ -22,11 +22,12 @@
     />
 
     <div v-if="hideObject">
-      <div class="flex flex-col items-center justify-center min-h-screen gap-9"
-        data-aos="zoom-in">
+      <FadeComponent
+        class="flex flex-col items-center justify-center text-center min-h-screen gap-9"
+      >
         <h2 class="text-3xl custom-font-playwrite">
           The Wedding of <br />
-          <span class="flex justify-center mt-4 text-xl custom-font-kyiv"
+          <span class="flex justify-center mt-4 text-2xl custom-font-kulim"
             >Hanifah & Prima</span
           >
         </h2>
@@ -34,16 +35,16 @@
         <h2 class="text-xl custom-font-playwrite">10 November 2024</h2>
         <p class="text-xl custom-font-kyiv">countdown</p>
         <Countdown endDate="2024-11-10T00:00:00Z" />
-        <ButtonCalendar />
-      </div>
-      <div
-        class="min-h-screen flex justify-center items-center"
-        data-aos="zoom-in"
-      >
-        <div class="bg-red-500 w-full p-5 text-center">
-          after the weeding of 10 November 2024
-        </div>
-      </div>
+        <!-- <ButtonCalendar /> -->
+      </FadeComponent>
+
+      <!-- <div style="height: 800px"></div> -->
+
+      <AwanComponent />
+
+      <SuratComponent/>
+
+      <div style="height: 1000px" class="border border-black"></div>
     </div>
   </div>
 </template>
@@ -56,6 +57,9 @@ import JogloWindowOpen from '@/assets/images/joglo_new_open.png'
 import logoInitial from '@/assets/images/initial.png'
 import ButtonCalendar from '@/components/ButtonCalendar.vue'
 import Countdown from '@/components/Countdown.vue'
+import FadeComponent from '@/components/FadeComponent.vue'
+import AwanComponent from '@/components/AwanComponent.vue'
+import SuratComponent from '@/components/SuratComponent.vue'
 
 const overflowVisible = ref(false)
 const imageVisible = ref(false)
@@ -65,22 +69,42 @@ const imageZoomAgain = ref(false)
 const imageDissappeared = ref(false)
 const hideObject = ref(false)
 
-const handleInvitationOpen = () => {
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+// const handleInvitationOpen = () => {
+//   imageZoom.value = true
+//   setTimeout(() => {
+//     openJoglo.value = true
+//     setTimeout(() => {
+//       imageZoomAgain.value = true
+//       setTimeout(() => {
+//         imageDissappeared.value = true
+//         imageVisible.value = false
+//         setTimeout(() => {
+//           hideObject.value = true
+//           overflowVisible.value = true
+//         }, 1000)
+//       }, 1000)
+//     }, 1700)
+//   }, 1500)
+// }
+
+const handleInvitationOpen = async () => {
   imageZoom.value = true
-  setTimeout(() => {
-    openJoglo.value = true
-    setTimeout(() => {
-      imageZoomAgain.value = true
-      setTimeout(() => {
-        imageDissappeared.value = true
-        imageVisible.value = false
-        setTimeout(() => {
-          hideObject.value = true
-          overflowVisible.value = true
-        }, 1500)
-      }, 1500)
-    }, 2300)
-  }, 2000)
+  await delay(1500) // Delay for first zoom
+
+  openJoglo.value = true
+  await delay(500) // Delay before second zoom
+
+  imageZoomAgain.value = true
+  await delay(1000) // Delay for image zoom out
+
+  imageDissappeared.value = true
+  imageVisible.value = false
+  await delay(1000) // Delay for fade out
+
+  hideObject.value = true
+  overflowVisible.value = true
 }
 
 const jogloImageSrc = computed(() => {

@@ -1,7 +1,7 @@
 <template>
   <button
     @click="redirectToCalendar"
-    class="px-10 py-2 bg-[#B2CAB5] rounded-full hover:bg-[#A0B8A4] hover:scale-105 transform transition-all duration-500"
+    class="px-5 py-2 bg-[#B2CAB5] rounded-full hover:bg-[#A0B8A4] hover:scale-105 transform transition-all duration-500"
   >
     Ingatkan Saya
   </button>
