@@ -23,6 +23,7 @@
 
     <div v-if="hideObject">
       <FadeComponent
+      direction="bottom"
         class="flex flex-col items-center justify-center text-center min-h-screen gap-9"
       >
         <h2 class="text-3xl custom-font-playwrite">
@@ -38,19 +39,22 @@
         <!-- <ButtonCalendar /> -->
       </FadeComponent>
 
-      <!-- <div style="height: 800px"></div> -->
-
       <AwanComponent />
 
       <SuratComponent/>
 
-      <div style="height: 1000px" class="border border-black"></div>
+      <LokasiComponent/>
+
+      <CommentComponent/>
+      
+      <DoaComponent/>
+      <!-- <div style="height: 1000px" class="border border-black"></div> -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, Comment } from 'vue'
 import OpeningWord from '@/components/OpeningWord.vue'
 import JogloWindowClosed from '@/assets/images/joglo_new.png'
 import JogloWindowOpen from '@/assets/images/joglo_new_open.png'
@@ -60,6 +64,9 @@ import Countdown from '@/components/Countdown.vue'
 import FadeComponent from '@/components/FadeComponent.vue'
 import AwanComponent from '@/components/AwanComponent.vue'
 import SuratComponent from '@/components/SuratComponent.vue'
+import LokasiComponent from '@/components/LokasiComponent.vue'
+import DoaComponent from '@/components/DoaComponent.vue'
+import CommentComponent from '@/components/CommentComponent.vue'
 
 const overflowVisible = ref(false)
 const imageVisible = ref(false)

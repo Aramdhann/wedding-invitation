@@ -59,6 +59,20 @@
         <!-- </div> -->
       </div>
     </FadeComponent>
+    <!-- <FadeBurung class="translate-y-[230px] translate-x-[-90px]" direction="burung2">
+      <img
+        src="@/assets/images/bird_2.png"
+        alt="burung terbang 2"
+        class="burung2"
+      />
+    </FadeBurung> -->
+    <FadeBurung class="translate-y-[150px]" direction="burung3">
+      <img
+        src="@/assets/images/bird_3.png"
+        alt="burung terbang 3"
+        class="burung3"
+      />
+    </FadeBurung>
     <FadeBurung>
       <img
         src="@/assets/images/bird_4.png"
@@ -74,11 +88,6 @@
     <!-- <FadeBurung class="absolute top-1/2">
       <img src="@/assets/images/bird_2.png" alt="burung terbang 2" />
     </FadeBurung> -->
-    <!-- <img
-      src="@/assets/images/bird_3.png"
-      alt="burung terbang 3"
-      class="absolute mt-[-320px] ml-[70px]"
-    /> -->
   </div>
 </template>
 

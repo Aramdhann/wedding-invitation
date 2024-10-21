@@ -84,10 +84,24 @@ onMounted(() => {
 /* Fade-in from the bottom */
 .fade-in-section.bottom {
   transform: translateY(60px); /* Increase translation Y-axis */
+  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
 }
 
 .fade-in-section.bottom.visible {
   transform: translateY(0);
+  transition: opacity 1.2s ease-out 1s, transform 1.2s ease-out 1s;
+}
+
+.fade-in-section.text {
+  transform: translateY(0);
+  opacity: 0;
+  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+}
+
+.fade-in-section.text.visible {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
 }
 </style>
 
