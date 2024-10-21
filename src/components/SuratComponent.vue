@@ -7,7 +7,7 @@
       <img
         src="@/assets/images/surat_tertutup.png"
         alt="surat tertutup"
-        class="w-full"
+        class="w-full px-5"
       />
     </FadeSuratTertutup>
 
@@ -18,7 +18,7 @@
       <img
         src="@/assets/images/surat_terbuka_2.png"
         alt="surat terbuka 2"
-        class="w-full"
+        class="w-full px-5"
       />
     </FadeSurat>
 
@@ -55,7 +55,7 @@
       <img
         src="@/assets/images/surat_terbuka.png"
         alt="surat terbuka"
-        class="w-full"
+        class="w-full px-5"
       />
     </FadeSurat>
   </div>

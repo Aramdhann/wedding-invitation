@@ -2,9 +2,7 @@
   <div class="pt-40 max-[392px]:pt-60 rsvp-container">
     <div class="rsvp-wrapper">
       <div class="rsvp-section min-h-screen flex flex-col items-center gap-20">
-        <p class="custom-font-playwrite-modern font-bold text-5xl">
-          RSVP
-        </p>
+        <h1 class="custom-font-playwrite-modern font-bold text-5xl">RSVP</h1>
         <div class="w-3/4 flex flex-col">
           <textarea
             class="w-full p-5 h-[164px] rounded-lg active:outline-none focus:outline-none focus:ring-4 focus:ring-[#A4B2A6] transform transition-all duration-500 bg-[#DDE1DD] placeholder-center resize-none mb-5"
@@ -23,40 +21,108 @@
             </button>
           </div>
           <button
-              class="px-5 py-2 w-fit bg-[#A4B2A6] rounded-full hover:bg-[#8a948b] hover:scale-105 transform transition-all duration-500 italic font-bold mx-auto mt-5"
-            >
-              Kirim
+            class="px-5 py-2 w-fit bg-[#A4B2A6] rounded-full hover:bg-[#8a948b] hover:scale-105 transform transition-all duration-500 italic font-bold mx-auto mt-5"
+          >
+            Kirim
           </button>
         </div>
       </div>
 
       <!-- RSVP Section 2 -->
-      <div class="rsvp-section min-h-screen flex flex-col items-center gap-20">
-        <p class="custom-font-playwrite-modern font-bold text-5xl">
-          RSVP
-        </p>
-        <div class="w-3/4 flex flex-col">
-          <textarea
-            class="w-full p-5 h-[164px] rounded-lg active:outline-none focus:outline-none focus:ring-4 focus:ring-[#A4B2A6] transform transition-all duration-500 bg-[#DDE1DD] placeholder-center resize-none mb-5"
-            placeholder="Pesan"
-          ></textarea>
-          <div class="flex justify-between gap-5">
-            <button
-              class="px-5 py-2 w-full bg-[#DDE1DD] rounded-full hover:bg-[#c2c9c3] hover:scale-105 transform transition-all duration-500 italic"
+      <div class="rsvp-section min-h-screen flex flex-col">
+        <h1 class="custom-font-playwrite-modern font-bold text-5xl text-center">
+          Wishes
+        </h1>
+        <!-- list chat -->
+        <div class="list-chat flex flex-col items-center gap-4 overflow-y-auto">
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
             >
-              Hadir
-            </button>
-            <button
-              class="px-5 py-2 w-full bg-[#DDE1DD] rounded-full hover:bg-[#c2c9c3] hover:scale-105 transform transition-all duration-500 italic"
-            >
-              Tidak Hadir
-            </button>
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
           </div>
-          <button
-              class="px-5 py-2 w-fit bg-[#A4B2A6] rounded-full hover:bg-[#8a948b] hover:scale-105 transform transition-all duration-500 italic font-bold mx-auto mt-5"
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
             >
-              Kirim
-          </button>
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+            >
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+            >
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+            >
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+            >
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+            >
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <!-- bubble chat -->
+          <div class="flex gap-4">
+            <div class="icon-circle"></div>
+            <div
+              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+            >
+              <p class="whitespace-break-spaces">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -99,5 +165,37 @@
 
 .rsvp-section {
   flex: 0 0 100%; /* Each section takes up the full viewport width */
+}
+
+/* Chat Bubble Style */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #a4b2a6;
+  border-radius: 50%;
+}
+
+@media (max-width: 376px) {
+  .rsvp-section {
+    gap: 30px;
+  }
+
+  .rsvp-section h1 {
+    font-size: 34px;
+  }
+
+  .list-chat {
+    max-height: 420px;
+  }
+}
+
+@media (min-width: 376px) {
+  .rsvp-section {
+    gap: 60px;
+  }
+
+  .list-chat {
+    max-height: 550px;
+  }
 }
 </style>
