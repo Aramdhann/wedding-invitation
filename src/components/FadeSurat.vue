@@ -58,7 +58,7 @@ onMounted(() => {
   opacity: 1;
   /* visibility: visible; */
   /* transition: opacity 0.2s ease-in-out; */
-  transition: opacity 0.3s ease-out 1.1s, transform 0.3s ease-out 1.1s;
+  transition: opacity 0.3s ease-out 0.7s, transform 0.3s ease-out 0.7s;
 }
 
 /* Default fade-in (dari bawah) */

@@ -65,7 +65,7 @@ onMounted(() => {
   opacity: 0;
   /* visibility: hidden; */
   /* transition: opacity 0.2s ease-in-out; */
-  transition: opacity 0.3s ease-out 1s, transform 0.3s ease-out 1s;
+  transition: opacity 0.3s ease-out 0.6s, transform 0.3s ease-out 0.6s;
 }
 
 /* Default fade-in (from bottom) */
