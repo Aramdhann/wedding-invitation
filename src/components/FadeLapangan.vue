@@ -74,7 +74,7 @@ onMounted(() => {
 .fade-in-section.pohon.visible {
   transform: translateX(10px);
   opacity: 0;
-  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
+  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
 }
 
 .fade-in-section.lapangan {
@@ -86,7 +86,7 @@ onMounted(() => {
 .fade-in-section.lapangan.visible {
   transform: translateY(10px) scale(1.1);
   opacity: 1;
-  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
+  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
 }
 
 .fade-in-section.semak {
@@ -98,7 +98,7 @@ onMounted(() => {
 .fade-in-section.semak.visible {
   transform: translateY(30px) scale(1.1);
   opacity: 1;
-  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
+  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
 }
 
 .fade-in-section.gunung {
@@ -110,7 +110,7 @@ onMounted(() => {
 .fade-in-section.gunung.visible {
   transform: translateY(20px);
   opacity: 1;
-  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
+  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
 }
 /* 
 @media (max-width: 376px) {
@@ -134,6 +134,6 @@ onMounted(() => {
 
 .fade-in-section.text.visible {
   opacity: 1;
-  transition: opacity 1.2s ease-out 3s, transform 1.2s ease-out 3s;
+  transition: opacity 1.2s ease-out 1.8s, transform 1.2s ease-out 1.8s;
 }
 </style>

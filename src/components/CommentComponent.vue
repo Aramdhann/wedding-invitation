@@ -29,98 +29,121 @@
       </div>
 
       <!-- RSVP Section 2 -->
-      <div class="rsvp-section min-h-screen flex flex-col">
+      <div class="rsvp-section min-h-screen flex flex-col gap-12">
         <h1 class="custom-font-playwrite-modern font-bold text-5xl text-center">
           Wishes
         </h1>
         <!-- list chat -->
-        <div class="list-chat flex flex-col items-center gap-4 overflow-y-auto">
+        <div
+          class="list-chat flex flex-col items-center gap-4 overflow-y-auto"
+          data-lenis-prevent
+        >
           <!-- bubble chat -->
           <div class="flex gap-4">
             <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            <div class="max-w-[250px]">
+              <div class="flex gap-2 mb-2 text-white">
+                <p class="whitespace-normal">Puput</p>
+                <span> - </span>
+                <p class="bg-green-500 px-2 rounded-full">Hadir</p>
+              </div>
+              <div
+                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+              >
+                <p class="whitespace-normal">
+                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
+                </p>
+              </div>
             </div>
           </div>
           <!-- bubble chat -->
           <div class="flex gap-4">
             <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            <div class="max-w-[250px]">
+              <div class="flex gap-2 mb-2 text-white">
+                <p class="whitespace-normal">Puput</p>
+                <span> - </span>
+                <p class="bg-red-500 px-2 rounded-full">Tidak Hadir</p>
+              </div>
+              <div
+                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+              >
+                <p class="whitespace-normal">
+                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
+                </p>
+              </div>
             </div>
           </div>
           <!-- bubble chat -->
           <div class="flex gap-4">
             <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            <div class="max-w-[250px]">
+              <div class="flex gap-2 mb-2 text-white">
+                <p class="whitespace-normal">Puput</p>
+                <span> - </span>
+                <p class="bg-green-500 px-2 rounded-full">Hadir</p>
+              </div>
+              <div
+                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+              >
+                <p class="whitespace-normal">
+                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
+                </p>
+              </div>
             </div>
           </div>
           <!-- bubble chat -->
           <div class="flex gap-4">
             <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            <div class="max-w-[250px]">
+              <div class="flex gap-2 mb-2 text-white">
+                <p class="whitespace-normal">Puput</p>
+                <span> - </span>
+                <p class="bg-red-500 px-2 rounded-full">Tidak Hadir</p>
+              </div>
+              <div
+                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+              >
+                <p class="whitespace-normal">
+                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
+                </p>
+              </div>
             </div>
           </div>
           <!-- bubble chat -->
           <div class="flex gap-4">
             <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            <div class="max-w-[250px]">
+              <div class="flex gap-2 mb-2 text-white">
+                <p class="whitespace-normal">Puput</p>
+                <span> - </span>
+                <p class="bg-green-500 px-2 rounded-full">Hadir</p>
+              </div>
+              <div
+                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+              >
+                <p class="whitespace-normal">
+                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
+                </p>
+              </div>
             </div>
           </div>
           <!-- bubble chat -->
           <div class="flex gap-4">
             <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div
-              class="bubble-chat bg-white p-4 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-            >
-              <p class="whitespace-break-spaces">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            <div class="max-w-[250px]">
+              <div class="flex gap-2 mb-2 text-white">
+                <p class="whitespace-normal">Puput</p>
+                <span> - </span>
+                <p class="bg-red-500 px-2 rounded-full">Tidak Hadir</p>
+              </div>
+              <div
+                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
+              >
+                <p class="whitespace-normal">
+                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -176,24 +199,12 @@
 }
 
 @media (max-width: 376px) {
-  .rsvp-section {
-    gap: 30px;
-  }
-
-  .rsvp-section h1 {
-    font-size: 34px;
-  }
-
   .list-chat {
-    max-height: 420px;
+    max-height: 600px;
   }
 }
 
 @media (min-width: 376px) {
-  .rsvp-section {
-    gap: 60px;
-  }
-
   .list-chat {
     max-height: 550px;
   }
