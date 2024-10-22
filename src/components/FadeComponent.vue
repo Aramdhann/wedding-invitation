@@ -60,7 +60,7 @@ onMounted(() => {
 
 .fade-in-section.default.visible {
   transform: translateY(0);
-  transition: opacity 1.2s ease-out 2.1s, transform 1.2s ease-out 2.1s;
+  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
 }
 
 /* Fade-in from the left */

@@ -50,7 +50,7 @@ onMounted(() => {
 
 .fade-in-section.visible {
   opacity: 1;
-  transition: opacity 1s ease-out 2.3s, transform 1s ease-out 2.3s;
+  transition: opacity 1s ease-out 2s, transform 1s ease-out 2s;
 }
 
 /* Default fade-in */

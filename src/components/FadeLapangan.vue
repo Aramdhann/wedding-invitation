@@ -66,55 +66,53 @@ onMounted(() => {
 }
 
 .fade-in-section.pohon {
-  transform: translateY(-150px) scale(1);
-  /* transform: translateX(120px) translateY(200px) scale(0.8);  */
-  opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
-}
-
-.fade-in-section.pohon.visible {
-  transform: translateY(-150px) translateX(60px) scale(1.2);
-  /* transform: translateX(200px) translateY(-30px) scale(1.2);  */
-  opacity: 0; /* Fade out while moving and scaling */
-  transition: opacity 2.2s ease-out 2.2s, transform 2.2s ease-out 2.2s;
-}
-
-.fade-in-section.lapangan {
-  transform: scale(1);
-  opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
-}
-
-.fade-in-section.lapangan.visible {
-  transform: scale(1.2);
-  opacity: 1;
-  transition: opacity 2.2s ease-out 2.2s, transform 2.2s ease-out 2.2s;
-}
-
-.fade-in-section.semak {
   transform: translateX(0);
   opacity: 1;
   transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
 }
 
-.fade-in-section.semak.visible {
-  transform: translateX(-60px);
+.fade-in-section.pohon.visible {
+  transform: translateX(10px);
   opacity: 0;
-  transition: opacity 2.2s ease-out 2.2s, transform 2.2s ease-out 2.2s;
+  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
+}
+
+.fade-in-section.lapangan {
+  transform: translateY(0px) scale(1);
+  opacity: 1;
+  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+}
+
+.fade-in-section.lapangan.visible {
+  transform: translateY(10px) scale(1.1);
+  opacity: 1;
+  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
+}
+
+.fade-in-section.semak {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+}
+
+.fade-in-section.semak.visible {
+  transform: translateY(30px) scale(1.1);
+  opacity: 1;
+  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
 }
 
 .fade-in-section.gunung {
-  transform: translateY(-15px) scale(1);
+  transform: translateY(0);
   opacity: 1;
   transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
 }
 
 .fade-in-section.gunung.visible {
-  transform: translateY(0) scale(1.4);
+  transform: translateY(20px);
   opacity: 1;
-  transition: opacity 2.2s ease-out 2.2s, transform 2.2s ease-out 2.2s;
+  transition: opacity 1.2s ease-out 2s, transform 1.2s ease-out 2s;
 }
-
+/* 
 @media (max-width: 376px) {
   .fade-in-section.gunung.visible {
     transform: translateY(0) scale(1.1);
@@ -127,17 +125,15 @@ onMounted(() => {
     opacity: 1;
     transition: opacity 2.2s ease-out 2.2s, transform 2.2s ease-out 2.2s;
   }
-}
+} */
 
 .fade-in-section.text {
-  transform: translateY(0px);
   opacity: 0;
   transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
 }
 
 .fade-in-section.text.visible {
-  transform: translateY(0);
   opacity: 1;
-  transition: opacity 2.2s ease-out 4s, transform 2.2s ease-out 4s;
+  transition: opacity 1.2s ease-out 3s, transform 1.2s ease-out 3s;
 }
 </style>

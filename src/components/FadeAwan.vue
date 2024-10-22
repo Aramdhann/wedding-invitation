@@ -71,7 +71,7 @@ onMounted(() => {
 .fade-in-section.left.visible {
   transform: translateX(-60px);
   opacity: 0;
-  transition: opacity 1.2s ease-out 1s, transform 1.2s ease-out 1s; 
+  transition: opacity 1.2s ease-out 0.5s, transform 1.2s ease-out 0.5s; 
 }
 
 /* Fade-in from the right */
@@ -83,6 +83,6 @@ onMounted(() => {
 .fade-in-section.right.visible {
   transform: translateX(60px); 
   opacity: 0;
-  transition: opacity 1.2s ease-out 1s, transform 1.2s ease-out 1s; 
+  transition: opacity 1.2s ease-out 0.5s, transform 1.2s ease-out 0.5s; 
 }
 </style>

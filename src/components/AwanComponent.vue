@@ -30,7 +30,7 @@
     </FadeAwan>
 
     <FadeComponent class="absolute z-40" :threshold="0.9">
-      <div class="relative w-3/4 mx-auto flex flex-col gap-4 sm:gap-4">
+      <div class="relative w-3/4 mx-auto flex flex-col gap-10">
         <p class="text-center custom-font-kulim">Bismillahirrahmanirrahim</p>
         <p class="text-center mx-auto custom-font-kulim">
           Kami mengundang Bapak/Ibu untuk hadir pada hari bahagia kami
