@@ -51,6 +51,7 @@ const hideObject = ref(false)
 
 const emit = defineEmits<{
   (e: 'openInvitation', value: boolean): void
+  (e: 'playAudio', value: boolean): void
 }>()
 
 function capitalizeWords(name: string) {

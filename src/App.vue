@@ -1,11 +1,7 @@
-<script setup lang="ts">
-import MusicPlayer from './components/MusicPlayer.vue';
-</script>
-
 <template>
-  <div data-scroll-container class="mobile-view scroll-smooth">
-    <div data-scroll data-scroll-speed="-2">
-      <MusicPlayer/>
+  <div data-scroll-container class="mobile-view">
+    <div class="relative" data-scroll data-scroll-speed="1">
+      <!-- <MusicPlayer/> -->
       <RouterView></RouterView>
     </div>
   </div>

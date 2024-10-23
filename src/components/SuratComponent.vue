@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="relative h-[710px] flex items-center justify-center"
-  >
+  <div class="relative h-[710px] flex items-center justify-center">
     <!-- amplop tertutup -->
     <FadeSuratTertutup class="absolute bottom-0 z-50 w-full">
       <img
@@ -44,10 +42,8 @@
           10.00 - 12.00
         </p>
       </div>
-      <div
-        class="absolute bottom-0 z-50 translate-y-[-240px]"
-      >
-        <ButtonCalendar/>
+      <div class="absolute bottom-0 z-50 translate-y-[-240px]">
+        <ButtonCalendar />
       </div>
     </FadeIsiSurat>
 
@@ -62,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import ButtonCalendar from './ButtonCalendar.vue';
+import ButtonCalendar from './ButtonCalendar.vue'
 import FadeIsiSurat from './FadeIsiSurat.vue'
 import FadeSurat from './FadeSurat.vue'
 import FadeSuratTertutup from './FadeSuratTertutup.vue'

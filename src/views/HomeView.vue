@@ -1,4 +1,5 @@
 <template>
+  <MusicPlayer :playAudio="playAudio"/>
   <div
     :class="{
       'overflow-visible': overflowVisible,
@@ -59,7 +60,6 @@ import OpeningWord from '@/components/OpeningWord.vue'
 import JogloWindowClosed from '@/assets/images/joglo_new.png'
 import JogloWindowOpen from '@/assets/images/joglo_new_open.png'
 import logoInitial from '@/assets/images/initial.png'
-import ButtonCalendar from '@/components/ButtonCalendar.vue'
 import Countdown from '@/components/Countdown.vue'
 import FadeComponent from '@/components/FadeComponent.vue'
 import AwanComponent from '@/components/AwanComponent.vue'
@@ -67,6 +67,7 @@ import SuratComponent from '@/components/SuratComponent.vue'
 import LokasiComponent from '@/components/LokasiComponent.vue'
 import DoaComponent from '@/components/DoaComponent.vue'
 import CommentComponent from '@/components/CommentComponent.vue'
+import MusicPlayer from '@/components/MusicPlayer.vue'
 
 const overflowVisible = ref(false)
 const imageVisible = ref(false)
@@ -75,26 +76,9 @@ const openJoglo = ref(false)
 const imageZoomAgain = ref(false)
 const imageDissappeared = ref(false)
 const hideObject = ref(false)
+const playAudio = ref(false)
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
-
-// const handleInvitationOpen = () => {
-//   imageZoom.value = true
-//   setTimeout(() => {
-//     openJoglo.value = true
-//     setTimeout(() => {
-//       imageZoomAgain.value = true
-//       setTimeout(() => {
-//         imageDissappeared.value = true
-//         imageVisible.value = false
-//         setTimeout(() => {
-//           hideObject.value = true
-//           overflowVisible.value = true
-//         }, 1000)
-//       }, 1000)
-//     }, 1700)
-//   }, 1500)
-// }
 
 const handleInvitationOpen = async () => {
   imageZoom.value = true
@@ -112,6 +96,7 @@ const handleInvitationOpen = async () => {
 
   hideObject.value = true
   overflowVisible.value = true
+  playAudio.value = true
 }
 
 const jogloImageSrc = computed(() => {

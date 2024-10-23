@@ -85,6 +85,12 @@
       alt="ranting"
       class="w-[200px] ml-auto translate-y-[-80px] max-[376px]:mt-5 max-[376px]:w-[150px] min-[392px]:w-[150px] min-[392px]:mt-5"
     />
+
+    <img
+      src="@/assets/images/branch_1.png"
+      alt="ranting"
+      class="absolute translate-y-[480px] w-[200px] left-0 max-[376px]:mt-5 max-[376px]:w-[200px] min-[392px]:w-[200px] min-[392px]:mt-5 z-50 scale-x-[-1]"
+    />
     <!-- <FadeBurung class="absolute top-1/2">
       <img src="@/assets/images/bird_2.png" alt="burung terbang 2" />
     </FadeBurung> -->
