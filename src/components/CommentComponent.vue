@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import BubbleChat from './BubbleChat.vue';
+</script>
+
 <template>
   <div class="pt-40 max-[392px]:pt-60 rsvp-container">
     <div class="rsvp-wrapper">
@@ -38,118 +42,15 @@
           class="list-chat flex flex-col items-center gap-4 overflow-y-auto"
           data-lenis-prevent
         >
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div class="max-w-[250px]">
-              <div class="flex gap-2 mb-2 text-white">
-                <p class="whitespace-normal">Puput</p>
-                <span> - </span>
-                <p class="bg-green-500 px-2 rounded-full">Hadir</p>
-              </div>
-              <div
-                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-              >
-                <p class="whitespace-normal">
-                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div class="max-w-[250px]">
-              <div class="flex gap-2 mb-2 text-white">
-                <p class="whitespace-normal">Puput</p>
-                <span> - </span>
-                <p class="bg-red-500 px-2 rounded-full">Tidak Hadir</p>
-              </div>
-              <div
-                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-              >
-                <p class="whitespace-normal">
-                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div class="max-w-[250px]">
-              <div class="flex gap-2 mb-2 text-white">
-                <p class="whitespace-normal">Puput</p>
-                <span> - </span>
-                <p class="bg-green-500 px-2 rounded-full">Hadir</p>
-              </div>
-              <div
-                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-              >
-                <p class="whitespace-normal">
-                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div class="max-w-[250px]">
-              <div class="flex gap-2 mb-2 text-white">
-                <p class="whitespace-normal">Puput</p>
-                <span> - </span>
-                <p class="bg-red-500 px-2 rounded-full">Tidak Hadir</p>
-              </div>
-              <div
-                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-              >
-                <p class="whitespace-normal">
-                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div class="max-w-[250px]">
-              <div class="flex gap-2 mb-2 text-white">
-                <p class="whitespace-normal">Puput</p>
-                <span> - </span>
-                <p class="bg-green-500 px-2 rounded-full">Hadir</p>
-              </div>
-              <div
-                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-              >
-                <p class="whitespace-normal">
-                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- bubble chat -->
-          <div class="flex gap-4">
-            <div class="icon-circle"></div>
-            <div class="max-w-[250px]">
-              <div class="flex gap-2 mb-2 text-white">
-                <p class="whitespace-normal">Puput</p>
-                <span> - </span>
-                <p class="bg-red-500 px-2 rounded-full">Tidak Hadir</p>
-              </div>
-              <div
-                class="bubble-chat bg-white p-3 rounded-e-[20px] rounded-bl-[20px] max-w-[250px]"
-              >
-                <p class="whitespace-normal">
-                  Semoga sakinah mawaddah wa rahmah yaa Hanii...
-                </p>
-              </div>
-            </div>
-          </div>
+          <BubbleChat name="Budi" status="Hadir">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente aliquid eos in voluptatibus officiis itaque, temporibus tenetur obcaecati, a doloribus voluptatum odit, repudiandae quis fugiat cum consequuntur nemo suscipit molestiae!
+          </BubbleChat>
+          <BubbleChat name="Budi" status="Tidak Hadir">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente aliquid eos in voluptatibus officiis itaque, temporibus tenetur obcaecati, a doloribus voluptatum odit, repudiandae quis fugiat cum consequuntur nemo suscipit molestiae!
+          </BubbleChat>
         </div>
       </div>
     </div>
-    <!-- <img src="@/assets/images/joglo_only.png" alt="rumah joglo" class="absolute"> -->
   </div>
 </template>
 
@@ -188,14 +89,6 @@
 
 .rsvp-section {
   flex: 0 0 100%; /* Each section takes up the full viewport width */
-}
-
-/* Chat Bubble Style */
-.icon-circle {
-  width: 40px;
-  height: 40px;
-  background-color: #a4b2a6;
-  border-radius: 50%;
 }
 
 @media (max-width: 376px) {
