@@ -36,7 +36,7 @@ const hours = ref(0)
 const minutes = ref(0)
 const seconds = ref(0)
 const expired = ref(false)
-let timer: number
+let timer: ReturnType<typeof setInterval>
 
 function showRemaining() {
   const now = new Date()
