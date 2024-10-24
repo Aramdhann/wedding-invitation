@@ -14,7 +14,7 @@
         <div class="flex">
           <div class="w-4 overflow-hidden">
             <div
-              class="h-3 bg-white rotate-45 transform origin-bottom-right rounded-sm"
+              class="h-3 bg-white opacity-[88%] rotate-45 transform origin-bottom-right rounded-sm"
             ></div>
           </div>
           <div
