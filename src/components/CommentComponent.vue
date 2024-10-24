@@ -62,7 +62,7 @@
           data-lenis-prevent
         >
           <BubbleChat
-            v-for="rsvp in rsvps"
+            v-for="rsvp in sortedRsvps"
             :key="rsvp.id"
             :name="rsvp.name"
             :status="rsvp.status"
@@ -79,7 +79,7 @@
 <script setup lang="ts">
 import Swal from 'sweetalert2';
 import BubbleChat from './BubbleChat.vue';
-import { ref } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { supabase } from '@/utils/supabase';
 
@@ -155,8 +155,13 @@ const submitRSVP = async () => {
   }
 }
 
-// Fetch RSVPs when the component mounts
-fetchRSVPs();
+// Call fetchRSVPs to get the data when the component is mounted
+onMounted(fetchRSVPs);
+// fetchRSVPs();
+
+const sortedRsvps = computed(() => {
+  return rsvps.value.slice().reverse(); // Reverse the order of the array
+});
 </script>
 
 <style scoped>
