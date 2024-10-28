@@ -19,7 +19,10 @@
                 v-model="status"
                 class="hidden"
               />
-              <span :class="status === 'Hadir' ? 'font-bold text-green-500' : ''">Hadir</span>
+              <span
+                :class="status === 'Hadir' ? 'font-bold text-green-500' : ''"
+                >Hadir</span
+              >
             </label>
 
             <label
@@ -31,7 +34,12 @@
                 v-model="status"
                 class="hidden"
               />
-              <span :class="status === 'Tidak Hadir' ? 'font-bold text-red-500' : ''">Tidak Hadir</span>
+              <span
+                :class="
+                  status === 'Tidak Hadir' ? 'font-bold text-red-500' : ''
+                "
+                >Tidak Hadir</span
+              >
             </label>
           </div>
 
@@ -55,13 +63,25 @@
 
       <!-- RSVP Section 2 -->
       <div class="rsvp-section min-h-screen flex flex-col items-center gap-12">
-        <h1 class="custom-font-playwrite-modern font-bold text-5xl text-center">Wishes</h1>
+        <h1 class="custom-font-playwrite-modern font-bold text-5xl text-center">
+          Wishes
+        </h1>
         <!-- list chat -->
         <div
           class="list-chat flex flex-col gap-4 overflow-y-auto"
           data-lenis-prevent
         >
+          <!-- Pesan jika belum ada RSVP -->
+          <p
+            v-if="sortedRsvps.length === 0"
+            class="text-[#A4B2A6] font-bold text-center italic"
+          >
+            Belum ada pesan.
+          </p>
+
+          <!-- Daftar RSVP -->
           <BubbleChat
+            v-else
             v-for="rsvp in sortedRsvps"
             :key="rsvp.id"
             :name="rsvp.name"
@@ -77,43 +97,51 @@
 </template>
 
 <script setup lang="ts">
-import Swal from 'sweetalert2';
-import BubbleChat from './BubbleChat.vue';
-import { ref, computed, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import { supabase } from '@/utils/supabase';
+import Swal from 'sweetalert2'
+import BubbleChat from './BubbleChat.vue'
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { supabase } from '@/utils/supabase'
 
-const capitalizedName = (name: string) => {
+function capitalizedName(name: string) {
   return name
-    .toLowerCase()
     .split(' ')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .map((word) => {
+      // const match = word.match(/^\((\w)/);
+      if (word.startsWith('(') && word.endsWith(')')) {
+        return `(${word.charAt(1).toUpperCase()}${word
+          .slice(2, -1)
+          .toLowerCase()})`
+      } else {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      }
+    })
+    .join(' ')
 }
 
-const route = useRoute();
-const name = route.params.name as string;
-const formattedName = capitalizedName(name.replace(/[+]/g, ' '));
+const route = useRoute()
+const name = route.params.name as string
+const formattedName = capitalizedName(name.replace(/[+]/g, ' '))
 
-const message = ref('');
-const status = ref('');
+const message = ref('')
+const status = ref('')
 
 interface Rsvp {
-  id: number; // Make sure to have an id field for unique keys
-  name: string;
-  status: 'Hadir' | 'Tidak Hadir';
-  message: string;
+  id: number // Make sure to have an id field for unique keys
+  name: string
+  status: 'Hadir' | 'Tidak Hadir'
+  message: string
 }
 
-const rsvps = ref<Rsvp[]>([]);
+const rsvps = ref<Rsvp[]>([])
 
 const fetchRSVPs = async () => {
-  const { data, error } = await supabase.from('rsvp').select('*');
+  const { data, error } = await supabase.from('rsvp').select('*')
 
   if (error) {
-    console.error('Error fetching RSVPs:', error);
+    console.error('Error fetching RSVPs:', error)
   } else {
-    rsvps.value = data || []; // Ensure rsvps is an empty array if data is null
+    rsvps.value = data || [] // Ensure rsvps is an empty array if data is null
   }
 }
 
@@ -123,45 +151,45 @@ const submitRSVP = async () => {
       name: formattedName || 'Anonymous',
       status: status.value,
       message: message.value,
-    };
+    }
 
-    console.log('Data RSVP:', rsvpData);
+    console.log('Data RSVP:', rsvpData)
 
-    const { data, error } = await supabase.from('rsvp').insert([rsvpData]);
+    const { data, error } = await supabase.from('rsvp').insert([rsvpData])
 
     if (error) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Terjadi kesalahan. Coba lagi nanti.',
-      });
+      })
     } else {
       Swal.fire({
         icon: 'success',
         title: 'Terima kasih!',
         text: 'Pesan dan status terkirim.',
-      });
+      })
 
-      message.value = '';
-      status.value = '';
-      await fetchRSVPs(); // Ensure that you await the fetch
+      message.value = ''
+      status.value = ''
+      await fetchRSVPs() // Ensure that you await the fetch
     }
   } else {
     Swal.fire({
       icon: 'warning',
       title: 'Oops...',
       text: 'Pesan dan status harus diisi!',
-    });
+    })
   }
 }
 
 // Call fetchRSVPs to get the data when the component is mounted
-onMounted(fetchRSVPs);
+onMounted(fetchRSVPs)
 // fetchRSVPs();
 
 const sortedRsvps = computed(() => {
-  return rsvps.value.slice().reverse(); // Reverse the order of the array
-});
+  return rsvps.value.slice().reverse() // Reverse the order of the array
+})
 </script>
 
 <style scoped>
