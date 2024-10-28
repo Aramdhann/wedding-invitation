@@ -11,10 +11,7 @@
       >
         Lokasi
       </p>
-      <FadeLapangan
-        direction="pohon"
-        class="absolute top-0 right-0 z-50"
-      >
+      <FadeLapangan direction="pohon" class="absolute top-0 right-0 z-50">
         <img
           src="@/assets/images/pohon_rev1.png"
           alt="pohon"
@@ -26,22 +23,29 @@
         alt="pohon"
         class="absolute right-0 z-40 w-1/2 translate-y-[-280px] translate-x-[100px]"
       />
-
-      <FadeLapangan direction="text" class="absolute z-40 w-full pt-10">
-        <div class="flex flex-col items-center justify-center text-center">
+      <FadeLapangan direction="text" class="absolute z-40 w-full pt-40">
+        <div
+          v-if="listedAkad"
+          class="flex flex-col items-center justify-center text-center"
+        >
           <p class="custom-font-kulim text-xl font-bold mb-5">Akad Nikah :</p>
           <p class="custom-font-kulim text-xl font-bold">Graha YKP</p>
           <p class="custom-font-kulim text-xl w-[280px]">
             Jl. Medokan Asri Utara No.39, Medokan Ayu, Kec. Rungkut, Surabaya,
             Jawa Timur 60295
           </p>
-          <p class="custom-font-kulim text-xl font-bold my-5">Akad Nikah :</p>
+          <ButtonMaps />
+        </div>
+        <div
+          v-else
+          class="flex flex-col items-center justify-center text-center"
+        >
+          <p class="custom-font-kulim text-xl font-bold my-5">Resepsi :</p>
           <p class="custom-font-kulim text-xl font-bold">Graha YKP</p>
           <p class="custom-font-kulim text-xl w-[280px]">
             Jl. Medokan Asri Utara No.39, Medokan Ayu, Kec. Rungkut, Surabaya,
             Jawa Timur 60295
           </p>
-          <ButtonMaps />
         </div>
       </FadeLapangan>
       <FadeLapangan direction="gunung" class="absolute z-10 w-full">
@@ -72,6 +76,30 @@
 </template>
 
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
 import ButtonMaps from './ButtonMaps.vue'
 import FadeLapangan from './FadeLapangan.vue'
+import invitationAkad from '@/store/list_invitation_akad.json'
+
+const route = useRoute()
+const name = route.params.name as string
+const formattedName = name.replace(/[+]/g, ' ').toLowerCase()
+
+function capitalizeWords(name: string) {
+  return name
+    .split(' ')
+    .map((word) => {
+      // const match = word.match(/^\((\w)/);
+      if (word.startsWith('(') && word.endsWith(')')) {
+        return `(${word.charAt(1).toUpperCase()}${word
+          .slice(2, -1)
+          .toLowerCase()})`
+      } else {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      }
+    })
+    .join(' ')
+}
+
+const listedAkad = invitationAkad.includes(capitalizeWords(formattedName))
 </script>
