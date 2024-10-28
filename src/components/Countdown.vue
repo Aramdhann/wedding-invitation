@@ -25,7 +25,13 @@ const props = defineProps<{
   endDate: string // Pass the end date as a prop
 }>()
 
-const end = new Date(props.endDate)
+function convertToWIB(dateString: string) {
+  const endUTC = new Date(dateString)
+  const endWIB = new Date(endUTC.getTime() - 7 * 60 * 60 * 1000)
+  return endWIB
+}
+
+const end = convertToWIB(props.endDate)
 const _second = 1000
 const _minute = _second * 60
 const _hour = _minute * 60
