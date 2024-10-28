@@ -13,7 +13,7 @@
         'opacity-100': showInvitationText,
         'display-none': hideObject,
       }"
-      class="text-white text-3xl custom-font-kyiv text-center w-5/6 transition-opacity"
+      class="text-white text-2xl custom-font-kyiv text-center transition-opacity"
     >
       <span v-if="capitalizedName">
         Halo, {{ capitalizedName }} <br />
@@ -57,25 +57,35 @@ const emit = defineEmits<{
 function capitalizeWords(name: string) {
   return name
     .split(' ')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => {
+      // const match = word.match(/^\((\w)/);
+      if (word.startsWith('(') && word.endsWith(')')) {
+        return `(${word.charAt(1).toUpperCase()}${word
+          .slice(2, -1)
+          .toLowerCase()})`
+      } else {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      }
+    })
     .join(' ')
 }
 
 const formattedName = name.replace(/[+]/g, ' ').toLowerCase()
 
 const capitalizedName = ref('')
+const formattedInvitationList = invitationList.map(capitalizeWords);
 
-// Check if the formatted name exists in the invitation list
 if (formattedName) {
-  const isInvited = invitationList.includes(formattedName)
+  const nameToCheck = capitalizeWords(formattedName)
+  const isInvited = formattedInvitationList.includes(nameToCheck)
   if (isInvited) {
-    capitalizedName.value = capitalizeWords(formattedName)
+    capitalizedName.value = nameToCheck
   }
 }
 
 const openInvitation = () => {
-  showInvitationText.value = false 
-  emit('openInvitation', false) 
+  showInvitationText.value = false
+  emit('openInvitation', false)
   setTimeout(() => {
     hideObject.value = true
   }, 500)

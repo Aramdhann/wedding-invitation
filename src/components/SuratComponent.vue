@@ -26,21 +26,25 @@
       direction="bottom"
     >
       <div
-        class="h-[630px] w-[290px] bg-gradient-to-t from-[#FAF8F7] to-[#EFEBE9] rounded-lg shadow-lg text-center py-10 flex flex-col gap-3 z-10"
+        class="h-[530px] w-[290px] bg-gradient-to-t from-[#FAF8F7] to-[#EFEBE9] rounded-lg shadow-lg text-center py-10 flex flex-col gap-3 z-10"
       >
         <p class="custom-font-kyiv text-2xl font-bold">Acara</p>
-        <p class="text-md custom-font-instrument mt-3">Akad Nikah</p>
-        <p class="text-md custom-font-instrument">
-          Minggu <br />
-          10 November 2024 <br />
-          08.00 - 09.30
-        </p>
-        <p class="text-md custom-font-instrument mt-3">Resepsi</p>
-        <p class="text-md custom-font-instrument">
-          Minggu <br />
-          10 November 2024 <br />
-          10.00 - 12.00
-        </p>
+        <div v-if="listedAkad">
+          <p class="text-md custom-font-instrument mt-3">Akad Nikah</p>
+          <p class="text-md custom-font-instrument">
+            Minggu <br />
+            10 November 2024 <br />
+            07.30 - 09.00
+          </p>
+        </div>
+        <div v-else>
+          <p class="text-md custom-font-instrument mt-3">Resepsi</p>
+          <p class="text-md custom-font-instrument">
+            Minggu <br />
+            10 November 2024 <br />
+            10.30 - 12.30
+          </p>
+        </div>
       </div>
       <div class="absolute bottom-0 z-50 translate-y-[-240px]">
         <ButtonCalendar />
@@ -62,4 +66,28 @@ import ButtonCalendar from './ButtonCalendar.vue'
 import FadeIsiSurat from './FadeIsiSurat.vue'
 import FadeSurat from './FadeSurat.vue'
 import FadeSuratTertutup from './FadeSuratTertutup.vue'
+import invitationAkad from '@/store/list_invitation_akad.json'
+import { useRoute } from 'vue-router'
+
+const route = useRoute();
+const name = route.params.name as string;
+const formattedName = name.replace(/[+]/g, ' ').toLowerCase();
+
+function capitalizeWords(name: string) {
+  return name
+    .split(' ')
+    .map((word) => {
+      // const match = word.match(/^\((\w)/);
+      if (word.startsWith('(') && word.endsWith(')')) {
+        return `(${word.charAt(1).toUpperCase()}${word
+          .slice(2, -1)
+          .toLowerCase()})`
+      } else {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      }
+    })
+    .join(' ')
+}
+
+const listedAkad = invitationAkad.includes(capitalizeWords(formattedName)) 
 </script>
