@@ -66,14 +66,14 @@
         class="burung2"
       />
     </FadeBurung> -->
-    <FadeBurung class="translate-y-[150px]" direction="burung3">
+    <FadeBurung class="translate-y-[160px]" direction="burung3">
       <img
         src="@/assets/images/bird_3.png"
         alt="burung terbang 3"
         class="burung3"
       />
     </FadeBurung>
-    <FadeBurung>
+    <FadeBurung class="translate-y-[40px]">
       <img
         src="@/assets/images/bird_4.png"
         alt="burung hinggap"
@@ -83,7 +83,7 @@
     <img
       src="@/assets/images/branch_1.png"
       alt="ranting"
-      class="w-[200px] ml-auto translate-y-[-80px] max-[376px]:mt-5 max-[376px]:w-[150px] min-[392px]:w-[150px] min-[392px]:mt-5"
+      class="w-[200px] ml-auto translate-y-[-40px] max-[376px]:mt-5 max-[376px]:w-[150px] min-[392px]:w-[150px] min-[392px]:mt-5"
     />
 
     <img
