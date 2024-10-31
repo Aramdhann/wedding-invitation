@@ -45,12 +45,12 @@ onMounted(() => {
 <style scoped>
 .fade-in-section {
   opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s; 
+  transition: opacity 0.7s ease-out 0s, transform 0.7s ease-out 0s; 
 }
 
 .fade-in-section.visible {
   opacity: 0;
-  transition: opacity 1.2s ease-out 1s, transform 1.2s ease-out 1s;
+  transition: opacity 0.7s ease-out 1s, transform 0.7s ease-out 1s;
 }
 
 /* Default fade-in (from bottom) */
@@ -65,24 +65,24 @@ onMounted(() => {
 /* Fade-in from the left */
 .fade-in-section.left {
   transform: translateX(0); 
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s; 
+  transition: opacity 0.7s ease-out 0s, transform 0.7s ease-out 0s; 
 }
 
 .fade-in-section.left.visible {
   transform: translateX(-60px);
   opacity: 0;
-  transition: opacity 1.2s ease-out 0.5s, transform 1.2s ease-out 0.5s; 
+  transition: opacity 0.7s ease-out 0.5s, transform 0.7s ease-out 0.5s; 
 }
 
 /* Fade-in from the right */
 .fade-in-section.right {
   transform: translateX(0); 
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s; 
+  transition: opacity 0.7s ease-out 0s, transform 0.7s ease-out 0s; 
 }
 
 .fade-in-section.right.visible {
   transform: translateX(60px); 
   opacity: 0;
-  transition: opacity 1.2s ease-out 0.5s, transform 1.2s ease-out 0.5s; 
+  transition: opacity 0.7s ease-out 0.5s, transform 0.7s ease-out 0.5s; 
 }
 </style>

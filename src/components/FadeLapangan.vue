@@ -68,49 +68,49 @@ onMounted(() => {
 .fade-in-section.pohon {
   transform: translateX(0);
   opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;
 }
 
 .fade-in-section.pohon.visible {
   transform: translateX(10px);
   opacity: 0;
-  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
+  transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
 }
 
 .fade-in-section.lapangan {
   transform: translateY(0px) scale(1);
   opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;
 }
 
 .fade-in-section.lapangan.visible {
-  transform: translateY(10px) scale(1.1);
+  transform: translateY(10px) scale(1.05);
   opacity: 1;
-  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
+  transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
 }
 
 .fade-in-section.semak {
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;
 }
 
 .fade-in-section.semak.visible {
-  transform: translateY(30px) scale(1.1);
+  transform: translateY(30px);
   opacity: 1;
-  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
+  transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
 }
 
 .fade-in-section.gunung {
   transform: translateY(0);
   opacity: 1;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;
 }
 
 .fade-in-section.gunung.visible {
   transform: translateY(20px);
   opacity: 1;
-  transition: opacity 1.2s ease-out 1.2s, transform 1.2s ease-out 1.2s;
+  transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
 }
 /* 
 @media (max-width: 376px) {
@@ -129,11 +129,11 @@ onMounted(() => {
 
 .fade-in-section.text {
   opacity: 0;
-  transition: opacity 1.2s ease-out 0s, transform 1.2s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;
 }
 
 .fade-in-section.text.visible {
   opacity: 1;
-  transition: opacity 1.2s ease-out 1.8s, transform 1.2s ease-out 1.8s;
+  transition: opacity 0.5s ease-out 0.7s, transform 0.5s ease-out 0.7s;
 }
 </style>

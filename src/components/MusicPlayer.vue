@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed mt-[550px] ms-3 z-[9999]">
+  <div class="fixed mt-[590px] ms-3 z-[100]">
     <button
       @click="toggleMusic"
       :class="{ 'animate-slow-spin': isPlaying }"

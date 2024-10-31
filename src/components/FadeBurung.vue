@@ -58,7 +58,7 @@ onMounted(() => {
 }
 
 .fade-in-section.default.visible {
-  transition: opacity 0.5s ease-out 1.2s, transform 0.5s ease-out 1.2s;
+  transition: opacity 0.5s ease-out 0.7s, transform 0.5s ease-out 0.7s;
 }
 
 /* Fade-in from the left */
@@ -105,6 +105,6 @@ onMounted(() => {
 
 .fade-in-section.burung3.visible {
   opacity: 0;
-  transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s;
+  transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
 }
 </style>

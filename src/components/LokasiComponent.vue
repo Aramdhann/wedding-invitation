@@ -7,7 +7,7 @@
     />
     <div class="relative min-[376px]:h-[800px] max-[376px]:h-[790px]">
       <p
-        class="absolute custom-font-kyiv text-3xl translate-y-[-100px] w-full text-center"
+        class="absolute custom-font-kyiv text-3xl translate-y-[100px] w-full text-center"
       >
         Lokasi
       </p>
@@ -23,7 +23,7 @@
         alt="pohon"
         class="absolute right-0 z-40 w-1/2 translate-y-[-280px] translate-x-[100px]"
       />
-      <FadeLapangan direction="text" class="absolute z-40 w-full pt-40">
+      <FadeLapangan direction="text" class="absolute z-40 w-full translate-y-48">
         <div
           v-if="listedAkad"
           class="flex flex-col items-center justify-center text-center"

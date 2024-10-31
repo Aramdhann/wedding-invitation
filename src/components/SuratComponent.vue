@@ -1,16 +1,16 @@
 <template>
   <div class="relative h-[710px] flex items-center justify-center">
     <!-- amplop tertutup -->
-    <FadeSuratTertutup class="absolute bottom-0 z-50 w-full">
+    <!-- <FadeSuratTertutup class="absolute bottom-0 z-50 w-full">
       <img
         src="@/assets/images/surat_tertutup.png"
         alt="surat tertutup"
         class="w-full px-5"
       />
-    </FadeSuratTertutup>
+    </FadeSuratTertutup> -->
 
     <!-- amplop terbuka -->
-    <FadeSurat
+    <div
       class="absolute bottom-0 z-40 w-full flex justify-center items-center"
     >
       <img
@@ -18,7 +18,7 @@
         alt="surat terbuka 2"
         class="w-full px-5"
       />
-    </FadeSurat>
+    </div>
 
     <!-- surat -->
     <FadeIsiSurat
@@ -51,13 +51,13 @@
       </div>
     </FadeIsiSurat>
 
-    <FadeSurat class="absolute bottom-0 z-20 w-full">
+    <div class="absolute bottom-0 z-20 w-full">
       <img
         src="@/assets/images/surat_terbuka.png"
         alt="surat terbuka"
         class="w-full px-5"
       />
-    </FadeSurat>
+    </div>
   </div>
 </template>
 

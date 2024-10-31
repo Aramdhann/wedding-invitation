@@ -45,12 +45,12 @@ onMounted(() => {
 <style scoped>
 .fade-in-section {
   opacity: 0;
-  transition: opacity 1s ease-out 0s, transform 1s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;
 }
 
 .fade-in-section.visible {
   opacity: 1;
-  transition: opacity 1s ease-out 2s, transform 1s ease-out 2s;
+  transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
 }
 
 /* Default fade-in */
